@@ -3,22 +3,22 @@
 #include <iostream>
 using namespace std;
 
-int binarynsearch(int arr[], int n, int key)
+int binarySearch(int array[], int size, int key)
 {
-    int s = 0;
-    int e = n;
+    int s = 0;    // starting value is 0
+    int e = size; // ending value is size
 
     while (s <= e)
     {
         int mid = (s + e) / 2;
 
-        if (arr[mid] == key)
+        if (array[mid] == key)
         {
             return mid;
         }
-        else if (arr[mid] > key)
+        else if (array[mid] > key)
         {
-            e = mid - 1;
+            return e = mid - 1;
         }
         else
         {
@@ -30,21 +30,21 @@ int binarynsearch(int arr[], int n, int key)
 
 int main()
 {
-    int n;
-    cout << "enter size of array: \n";
-    cin >> n;
+    int size;
+    cout << "enter size of an array: ";
+    cin >> size;
 
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    int array[size];
+    for (int i = 0; i < size; i++)
     {
-        cin >> arr[i];
+        cin >> array[i];
     }
 
     int key;
-    cout << "enter key: ";
+    cout << "enter your key: ";
     cin >> key;
 
-    cout << binarynsearch(arr, n, key);
+    cout << binarySearch(array, size, key) << endl;
 
     return 0;
 }
