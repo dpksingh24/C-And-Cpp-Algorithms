@@ -48,3 +48,18 @@ int main()
 
     return 0;
 }
+
+// TIME COMPLEXITY
+// ## After first iteration, length of array -> n
+// ## After second iteration, length of array -> n/2
+// ## After third iteration, length of array -> (n/2)/2 = n/2^2
+// ## After k iteration, length of array -> n/2^k
+
+// let the length of array become 1 after k iteration
+// => n/2^k = 1
+// => n = 2^k2
+// => log2(n) = log2(2^k)
+// => log2(n) = k log2^2
+// => k = log^n 2
+// TIME COMPLEXITY
+// 0 (log^n)
