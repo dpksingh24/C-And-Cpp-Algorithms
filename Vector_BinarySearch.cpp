@@ -34,4 +34,4 @@ int main() {
     }
 }
 //Time Complexity
- // *log(N)base 2
+ // *log2(N)
