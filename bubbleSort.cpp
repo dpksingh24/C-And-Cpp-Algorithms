@@ -1,34 +1,31 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
+int bubbleSort(int arr[], int size)
 {
-    int size;
-    cin >> size;
+    int temp, i;
+    for (int i = 1; i < (size - 1); i++)
+        for (int j = 0; j < (size - i); j++)
 
-    int arr[size];
-    for (int i = 0; i < size; i++)
-    {
-        cin >> arr[i];
-    }
-
-    int counter = 1;
-    while (counter < size)
-    {
-        for (int i = 0; i < size - counter; i++)
-        {
-            if (arr[i] > arr[i + 1])
+            if (arr[j] > arr[j + 1])
             {
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
-        }
-        counter++;
-    }
-
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
     }
+
+    return 0;
+}
+
+int main()
+{
+    int arr[] = {9, 2, 1, 0, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    bubbleSort(arr, size);
+    return 0;
 }
