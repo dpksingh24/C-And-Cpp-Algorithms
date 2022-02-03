@@ -2,7 +2,7 @@ function prime( num)
 {
     var sum = 0;
     var j, i, flag;
-    console.log("prime no are:");
+    console.log(`${num} prime no are:`);
     for (i = 2; i < num; ++i)
     {
         flag = 0;
@@ -19,7 +19,7 @@ function prime( num)
         if (flag == 0)
             sum = sum + i;
     }
-    console.log("sum: "+ sum);
+    console.log(`sum of ${10} prime number are: `+ sum);
 }
 var num = 10;
 prime(num);
