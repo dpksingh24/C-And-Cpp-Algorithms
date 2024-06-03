@@ -47,3 +47,31 @@ int main()
 
     return 0;
 }
+
+// 3rd method
+#include <iostream>
+using namespace std;
+
+bool isPalindrome(string str)
+{
+     int low = 0; // 1 //2
+     int high = str.length() - 1;  // 3, 2
+
+     while(low < high){
+         if (str[low] != str[high]) // str[a] != str[a], str[b] != str[b]
+            return false;
+        low ++;
+        high --;
+     }
+     return true; //true
+}
+
+int main() {
+    string str = "abba";
+    if (isPalindrome(str))
+        cout << "yes" << endl; //output => true
+    else
+        cout << "no" << endl;
+
+    return 0;
+}
