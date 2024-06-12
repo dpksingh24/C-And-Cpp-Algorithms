@@ -3,11 +3,11 @@ using namespace std;
 
 void printMissingElements(int arr[], int N)
 {
-    int diff = arr[0] - 0;
+    int diff = arr[0] - 0; // 6-0=6
 
     for (int i = 0; i < N; i++)
     {
-        if (arr[i] - i != diff)
+        if (arr[i] - i != diff) // 5 != 6
         {
             while (diff < arr[i] - i)
             {
@@ -31,8 +31,6 @@ int main()
 // method 2
 #include <bits/stdc++.h>
 using namespace std;
-
-// Function to find the missing elements
 void printMissingElements(int arr[], int N)
 {
     int cnt = 0;

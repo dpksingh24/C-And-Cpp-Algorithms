@@ -11,6 +11,7 @@ int binarySearch(int array[], int size, int key)
     while (s <= e)
     {
         int mid = (s + e) / 2;
+        // int mid = (s + e) / 2;
 
         if (array[mid] == key)
         {
@@ -30,15 +31,8 @@ int binarySearch(int array[], int size, int key)
 
 int main()
 {
-    int size;
-    cout << "enter size of an array: ";
-    cin >> size;
-
-    int array[size];
-    for (int i = 0; i < size; i++)
-    {
-        cin >> array[i];
-    }
+    int array[5] = {5, 10, 1, 2, 3};
+    int size = sizeof(array) / sizeof(array[0]);
 
     int key;
     cout << "enter your key: ";
